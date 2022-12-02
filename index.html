@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центр Высшего Водительского Мастерства</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="">Главная</a></li>
+            <li><a href="">О нас</a></li>
+            <li><a href="">Контакты</a></li>
+            <div class="logo"><span>Ц</span>ВВ<span>М</span></a></div>
+            <li><a href="">Курсы</a></li>
+            <li><a href="">Галерея</a></li>
+            <li><a href="">Учителя</a></li>
+        </ul>
+    </header>
+    <main>
+        <section class="screen1">
+            <div class="text">
+                <h1>
+                    <span>Ц</span>ентр<br>
+                    <span>В</span>ысшего<br>
+                    <span>В</span>одительского<br>
+                    <span>М</span>астерства<br>
+                </h1>
+                <div class="buttons">
+                    <button>Курсы</button>
+                    <button>Консультация</button>
+                </div>
+            </div>
+            <p>30 лет преподавания и профессинального обучения водителей, в том числе начинающих, преодолевающих страхи вождения!</p>
+        </section>
+
+        <section class="screen2">
+            <h1>Наши преимущества</h1>
+            <div class="container">
+                <div class="item">
+                    <img src="img/icon.png" alt="">
+                    <h3>Все наши преподаватели имеют высшее образование</h3>
+                </div>
+                <div class="item">
+                    <img src="img/icon.png" alt="">
+                    <h3>Все наши преподаватели имеют высшее образование</h3>
+                </div>
+
+                <div class="item">
+                    <img src="img/icon.png" alt="">
+                    <h3>Все наши преподаватели имеют высшее образование</h3>
+                </div>
+            </div>
+            <div class="mob-container">
+                <a onclick="onclick()" id="icon"><img src="img/left.svg" class="icon"></a>
+                <div class="slider">
+                    <div class="sl">
+                        <div class="item">
+                            <img src="img/icon.png" alt="">
+                            <h3>Все наши преподаватели имеют высшее образование</h3>
+                        </div>
+                        <div class="item">
+                            <img src="img/icon.png" alt="">
+                            <h3>Все наши преподаватели имеют высшее образование</h3>
+                        </div>
+        
+                        <div class="item">
+                            <img src="img/icon.png" alt="">
+                            <h3>Все наши преподаватели имеют высшее образование</h3>
+                        </div>
+                    </div>
+                </div>
+                <a onclick="onclick()" id="icon2"><img src="img/right.svg" class="icon2"></a>
+            </div>
+        </section>
+
+        <section class="screen3">
+        
+            <h1>Связаться с нами</h1>
+            <h2>Оставьте нам заявку, и мы свяжемся с вами для дальнейшей консультации по любым вопросам!</h2>
+            <div class="form">
+                <input class="name" type="name" id="name_in" name="name" placeholder="Как к вам обращаться?">
+                <br>
+                <label class="name_label">Как к вам обращаться?</label>
+                <h3>Где с вами лучше связаться?</h3>
+                <div class="container">
+                    <div class="inputs">
+                        <p><input type="radio" name="rb" value="Telegram" id="t"> <label for="t">Telegram</label></p>
+                        <p><input type="radio" name="rb" value="WhatsApp" id="w"> <label for="w">WhatsApp</label></p>
+                        <p><input type="radio" name="rb" value="Viber" id="v"> <label for="v">Viber</label></p>
+                        <p><input type="radio" name="rb" value="Vkontakte" id="vk"> <label for="vk">ВКонтакте</label></p>
+                        <p><input type="radio" name="rb" value="instagram" id="i"> <label for="i">Instagram</label></p>
+                    </div>
+                    <input type="name" id="nickname" class="nickname" placeholder="">
+                </div>
+                <button class="enter" id="enter" onclick="oncclick()">Оставить заявку</button>
+
+                <div class="thanks">
+                    <div class="container2">
+                        <h1>Спасибо!</h1>
+                        <h2>Ваша заявка на консультацию успешно отправлена. Мы свяжемся с вами, как только сможем)</h2>
+                        <button onclick="onclick()" id="close">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A66f4b8e73c2de4bb3b70eba95965ceb2cfe05aa1c74b742aee47d04409348ab8&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
+        </section>
+    </main>
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>
