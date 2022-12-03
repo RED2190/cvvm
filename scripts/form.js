@@ -6,13 +6,11 @@ var i_but = document.getElementById("i");
 var N = document.getElementById("name_in");
 var enter = document.getElementById("enter");
 var enter2 = document.getElementsByClassName("enter");
-var thanks = document.getElementsByClassName("thanks");
-var th = document.getElementsByClassName("container2");
+
 
 var nic = document.getElementById("nickname");
 var nick = document.getElementsByClassName("nickname");
 
-var CloseButton = document.getElementById("close");
 var leftButton = document.getElementById("icon");
 var RightButton = document.getElementById("icon2");
 var sl = document.getElementsByClassName("sl");
@@ -73,19 +71,33 @@ RightButton.onclick = function(){
         check--
     }
 }
-enter.onclick = function(){
-    if(nic.value == "" || N.value == "")
+
+//Бургер меню
+var menu = document.getElementsByTagName("nav");
+var burger = document.getElementById("burger");
+var line1 = document.getElementsByClassName("line1");
+var line2 = document.getElementsByClassName("line2");
+var line3 = document.getElementsByClassName("line3");
+burger_check = 0;
+burger.onclick = function(){
+    if(burger_check == 0)
     {
-        alert("Ошибка! Похоже, что вы ввели не все данные, проверьте правильность введенных данных и повторите попытку!");
+        menu[0].style.right = "0";
+        burger_check++;
+
+        line1[0].style.transform = "translate(-5px, 10px) rotate(45deg) ";
+        line2[0].style.opacity = "0";
+        line3[0].style.transform = "translate(-5px, -8px) rotate(-45deg)";
+
+        
     }
-    else{
-        thanks[0].style.display = "flex";
-        th[0].style.top = "1500px";
-        th[0].style.transition = ".9s";
+    else
+    {
+        menu[0].style.right = "-100%";
+        burger_check--;
+
+        line1[0].style.transform = "translate(0px, 0px) rotate(0deg) ";
+        line2[0].style.opacity = "1";
+        line3[0].style.transform = "translate(0px, 0px) rotate(0deg)";
     }
-}
-CloseButton.onclick = function(){
-    th[0].style.top = "1000px";
-    th[0].style.transition = ".9s";
-    thanks[0].style.display = "none";
 }
