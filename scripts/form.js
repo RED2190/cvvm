@@ -42,21 +42,6 @@ i_but.onclick = function(){
 }
 
 leftButton.onclick = function(){
-    if(check == 0)
-    {
-        sl[0].style.position = "relative";
-        sl[0].style.left = "-200px";
-        sl[0].style.transition = "ease .6s";
-        check++
-    }
-    else if(check == 1){
-        sl[0].style.position = "relative";
-        sl[0].style.left = "-400px";
-        sl[0].style.transition = "ease .6s";
-        check++
-    }
-}
-RightButton.onclick = function(){
     if(check == 1)
     {
         sl[0].style.position = "relative";
@@ -71,6 +56,23 @@ RightButton.onclick = function(){
         check--
     }
 }
+RightButton.onclick = function(){
+
+    if(check == 0)
+    {
+        sl[0].style.position = "relative";
+        sl[0].style.left = "-200px";
+        sl[0].style.transition = "ease .6s";
+        check++
+    }
+    else if(check == 1){
+        sl[0].style.position = "relative";
+        sl[0].style.left = "-400px";
+        sl[0].style.transition = "ease .6s";
+        check++
+    }
+}
+
 
 //Бургер меню
 var menu = document.getElementsByTagName("nav");
@@ -100,4 +102,26 @@ burger.onclick = function(){
         line2[0].style.opacity = "1";
         line3[0].style.transform = "translate(0px, 0px) rotate(0deg)";
     }
+}
+
+//Уведомления
+var close_button = document.getElementById("close");
+var push = document.getElementsByClassName("thanks");
+var body = document.getElementsByTagName("main");
+
+enter.onclick = function(){
+    if(nic.value == "" || N.value == "")
+    {
+        alert("Упс! Проверьте, похоже, что вы ввели не все данные!");
+    }
+    else{
+        push[0].style.visibility = "visible";
+        push[0].style.top = "1400px";
+        body[0].style.opacity = "0.5";
+    }
+}
+close_button.onclick = function(){
+    push[0].style.visibility = "hidden";
+    push[0].style.top = "100px";
+    body[0].style.opacity = "1";
 }

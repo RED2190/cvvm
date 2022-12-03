@@ -111,7 +111,7 @@
                     </div>
                     <input type="name" id="nickname" class="nickname" placeholder="" autocomplete="off">
                 </div>
-                <button class="enter" id="enter" onclick="oncclick()">Оставить заявку</button>
+                <button class="enter" id="enter" onclick="onclick()">Оставить заявку</button>
             </div>
         </section>
         <section class="map">
@@ -120,6 +120,12 @@
         </section>
     </main>
 
-    <script src="scripts/form.js"></script>
+    
 </body>
+<div class="thanks">
+    <a onclick="onclick()" id="close"><img src="img/x.svg" alt="" width="50" height="50"></a>
+    <h1>Мы сохранили вашу заявку! Свяжемся с вами, как только сможем, спасибо!</h1>
+
+</div>
+<script src="scripts/form.js"></script>
 </html>

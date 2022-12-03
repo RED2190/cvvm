@@ -282,6 +282,10 @@ button:hover{
     visibility: hidden;  
     transition: ease .3s;   
 }
+.name:not(:placeholder-shown) ~ .name_label{
+    top: -86px;
+    visibility: visible;
+}
 .name:focus ~ .name_label{
     visibility: visible;
     top: -86px;
@@ -360,12 +364,39 @@ input[type = "radio"]:checked{
 .mob-map{
     display: none;
 }
+nav{
+    display: none;
+}
+.thanks{
+    width: 800px;
+    height: 200px;
+    position: absolute;
+    visibility: hidden;
+    top: 100px;
+    /*top:1400px;*/
+    background-color:#1B1919;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    transition: ease .4s;
+}
+.thanks img{
+    position: absolute;
+    right: 25px;
+    top: 25px;
+}
+.thanks h1{
+    text-align: center;
+    margin-top: 40px;
+    width: 80%;
+}
 
 @media only screen and (max-width : 420px){
     header{
         border: none;
     }
     nav{
+        display: block;
         width: 160px;
         height: 280px;
         background-color: #1B1919;
@@ -485,6 +516,18 @@ input[type = "radio"]:checked{
         padding-bottom: 10px;
         margin-top: 23px;
     }
+    .name:focus{
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
+    .name:not(:placeholder-shown) ~ .name_label{
+        top: -60px;
+        visibility: visible;
+    }
+    .name:not(:placeholder-shown){
+        font-size: 13px;
+        padding-bottom: 5px;
+    }
     .name::placeholder{
         font-size: 13px;   
     }
@@ -523,4 +566,5 @@ input[type = "radio"]:checked{
     .mob-map{
         display: block;
     }
+
 }
