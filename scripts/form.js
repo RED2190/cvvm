@@ -107,21 +107,45 @@ burger.onclick = function(){
 //Уведомления
 var close_button = document.getElementById("close");
 var push = document.getElementsByClassName("thanks");
+var push2 = document.getElementById("thanks");
 var body = document.getElementsByTagName("main");
-
 enter.onclick = function(){
+    console.log(getComputedStyle(push2).top);
     if(nic.value == "" || N.value == "")
     {
+
         alert("Упс! Проверьте, похоже, что вы ввели не все данные!");
+        
     }
     else{
-        push[0].style.visibility = "visible";
-        push[0].style.top = "1400px";
-        body[0].style.opacity = "0.5";
+        
+        if(getComputedStyle(push2).top == "100px")
+        {
+            push[0].style.visibility = "visible";
+            push[0].style.top = "1400px";
+            body[0].style.opacity = "0.5";
+            console.log("ПК версия");
+        }
+        else if(getComputedStyle(push2).top == "10px"){
+            push2.style.visibility = "visible";
+            push2.style.top = "800px";
+            body[0].style.opacity = "0.5";
+            console.log("Моб версия");
+        }
     }
 }
 close_button.onclick = function(){
-    push[0].style.visibility = "hidden";
-    push[0].style.top = "100px";
-    body[0].style.opacity = "1";
+    if(getComputedStyle(push2).top == "1400px")
+    {
+        push[0].style.visibility = "hidden";
+        push[0].style.top = "100px";
+        body[0].style.opacity = "1";  
+        
+    }
+    else{
+        push[0].style.visibility = "hidden";
+        push[0].style.top = "10px";
+        body[0].style.opacity = "1";
+    }
+
 }
